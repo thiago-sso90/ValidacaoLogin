@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ValidacaoLogin</name>
+    </assembly>
+    <members>
+        <member name="M:ValidacaoLogin.Controllers.UsuarioController.GetAll">
+            <summary>
+            Mostra todos os Usuarios
+            </summary>
+            <returns>Todos Ususarios</returns>
+            <response code = "200"></response>
+        </member>
+        <member name="M:ValidacaoLogin.Controllers.UsuarioController.Get(System.String)">
+            <summary>
+            Mostra apenas um usuario
+            </summary>
+            <param name="id">Identificador do Usuario</param>
+            <returns>Ddados do Usuario</returns>
+            <response code = "200">Sucesso</response>
+            <response code = "404">Usuario não Encontrado</response>
+        </member>
+        <member name="M:ValidacaoLogin.Controllers.UsuarioController.Post(ValidacaoLogin.Entidades.Usuario)">
+            <summary>
+            Cadastrar Um Ususario
+            </summary>
+            <remarks>
+            {"id": 0,"email": "string","senha": "string"}
+            </remarks>
+            <param name="usuario">Dados Do Usuario</param>
+            <returns>Usuario recem-criado</returns>
+            <response code = "201">Usuario criado com Sucesso</response>
+        </member>
+        <member name="M:ValidacaoLogin.Controllers.UsuarioController.Update(ValidacaoLogin.Entidades.Usuario)">
+            <summary>
+            Atualiza um Usuario
+            </summary>
+            <remarks>
+            {"id": 0,"email": "string","senha": "string"}
+            </remarks>
+            <param name="usuario">Dados do Usuario</param>
+            <returns>Nada</returns>
+            <response code = "204">Sucesso</response>
+        </member>
+        <member name="M:ValidacaoLogin.Controllers.UsuarioController.Delete(System.Int32)">
+            <summary>
+            Deletar um Ususario
+            </summary>
+            <param name="id">Identificador de um Usuario</param>
+            <returns>Nada</returns>
+            <response code = "204">Deletado com Sucesso</response>
+            <response code = "404">Usuario Não Encontardo</response>
+        </member>
+        <member name="T:ValidacaoLogin.Migrations.Persistencia">
+            <inheritdoc />
+        </member>
+        <member name="M:ValidacaoLogin.Migrations.Persistencia.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ValidacaoLogin.Migrations.Persistencia.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ValidacaoLogin.Migrations.Persistencia.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>
